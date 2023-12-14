@@ -9,10 +9,11 @@ for i in range(months_to_see):
 
     interest_generated = money_owed * monthly_interest_rate
     money_owed = money_owed + interest_generated
-    money_owed = money_owed - monthly_payment
 
-    if money_owed-monthly_payment < 0:
-        print(f'The last payment is {money_owed}. You paid off the load in {i + 1} months')
+    if money_owed - monthly_payment < 0:
+        print(f'The last payment is {money_owed:.2f}. You paid off the load in {i + 1} months')
         break
 
-    print(f'Paid {monthly_payment}, of which {interest_generated} was interest. Now you owe {money_owed}')
+    money_owed = money_owed - monthly_payment
+    
+    print(f'Paid {monthly_payment:.2f}, of which {interest_generated:.2f} was interest. Now you owe {money_owed:.2f}')
