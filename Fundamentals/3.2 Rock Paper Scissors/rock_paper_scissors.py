@@ -6,7 +6,7 @@ playerOutcomeMatrix = {
 }
 
 computer_choice = 'scissors'
-user_choice = input('Do you want rock, paper, or scissors?\n')
+user_choice = input('Do you want rock, paper, or scissors?\n').lower()
 
 if user_choice in choices:
     outcome = playerOutcomeMatrix[computer_choice][user_choice]
