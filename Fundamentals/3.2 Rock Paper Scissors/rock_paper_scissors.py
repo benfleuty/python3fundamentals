@@ -1,3 +1,5 @@
+import random
+
 choices = ['rock', 'paper', 'scissors']
 playerOutcomeMatrix = {
     'rock':     {'rock': 'TIE',  'paper': 'WIN',  'scissors': 'LOSE'},
@@ -5,7 +7,7 @@ playerOutcomeMatrix = {
     'scissors': {'rock': 'WIN',  'paper': 'LOSE', 'scissors': 'TIE'}
 }
 
-computer_choice = 'scissors'
+computer_choice = random.choice(choices)
 user_choice = input('Do you want rock, paper, or scissors?\n').lower()
 
 if user_choice in choices:
