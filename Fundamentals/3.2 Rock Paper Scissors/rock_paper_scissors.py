@@ -1,15 +1,15 @@
+choices = ['rock', 'paper', 'scissors']
+playerOutcomeMatrix = {
+    'rock':     {'rock': 'TIE',  'paper': 'WIN',  'scissors': 'LOSE'},
+    'paper':    {'rock': 'LOSE', 'paper': 'TIE',  'scissors': 'WIN'},
+    'scissors': {'rock': 'WIN',  'paper': 'LOSE', 'scissors': 'TIE'}
+}
+
 computer_choice = 'scissors'
 user_choice = input('Do you want rock, paper, or scissors?\n')
 
-if computer_choice == user_choice:
-    print('TIE')
-
-elif user_choice == 'rock' and computer_choice == 'scissors':
-    print('WIN')
-elif user_choice == 'paper' and computer_choice == 'rock':
-    print('WIN')
-elif user_choice == 'scissors' and computer_choice == 'paper':
-    print('WIN')
-    
+if user_choice in choices:
+    outcome = playerOutcomeMatrix[computer_choice][user_choice]
+    print(f'You {outcome}! The computer chose {computer_choice}.')
 else:
-    print('LOSE')
+    print('Invalid choice. Please choose rock, paper, or scissors.')
