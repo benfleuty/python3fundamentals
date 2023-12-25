@@ -16,5 +16,7 @@ def main():
 
     my_company.display_employees()
 
+    my_company.pay_employees()
+
 
 main()
